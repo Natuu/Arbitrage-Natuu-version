@@ -1,6 +1,6 @@
 /* Equipes */
 
-input[type="text"], .nom-change
+.nom-change
 {
 	padding: 8px 15px;
 	background-color: inherit;
@@ -37,22 +37,22 @@ input[type="text"], .nom-change
 
 .joueurs-detail
 {
+	position: relative;
 	width: 100%;
 	margin: 10px 0;
-	height: 50%;
+	max-height: 160px;
 	padding: 5px 55px;
 	@include box-sizing(border-box);
 
 	font-size: 0.5em;
 	text-align: left;
 	overflow-y: scroll;
+	z-index: 3;
 }
 
 .joueur
 {
 	display: inline-block;
-	cursor: pointer;
-	padding: 0 0 10px 0;
 	width: 100%;
 }
 
@@ -70,16 +70,22 @@ input[type="text"], .nom-change
 	top: 4px;
 	background-image: url(../images/options.png);
 	background-size: contain;
+	cursor: pointer;
 }
 
 .delete
 {
 	display: inline-block;
 	font-size: 45px;
-	color: red;
-	line-height: 0em;
+	line-height: 10px;
 	position: relative;
 	top: 11px;
+	cursor: pointer;
+
+	&:hover, &:focus, &:active
+	{
+		color: red;
+	}
 }
 
 .carton
@@ -89,9 +95,10 @@ input[type="text"], .nom-change
 	width: 11px;
 	position: relative;
 	top: 1px;
-	background-color: yellow;
+	background-color: $texte;
 	margin: 0 5px;
 	@include box-shadow(1px 1px 3px $shadow-color);
+	cursor: pointer;
 }
 
 .numero
@@ -100,8 +107,25 @@ input[type="text"], .nom-change
 	position: relative;
 	top: 5px;
 	float: left;
+	padding: 0 0 14px 0;
 }
 
+.numero-change
+{
+	padding: 3px 8px;
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	border: 2px $texte solid;
+	@include box-shadow(inset 1px 1px 3px $shadow-color, 1px 1px 3px $shadow-color);
+	width: 55px;
+	@include box-sizing(border-box);
+	text-align: left;
+	text-shadow: 2px 2px 5px $shadow-color;
+	position: relative;
+	right: 10px;
+	bottom: 4px;
+}
 
 .color-picker
 {
@@ -113,8 +137,13 @@ input[type="text"], .nom-change
 {
 	width: 18px;
 	height: 18px;
-
 	border-radius: 300px;
-
 	display: inline-block;
+	@include box-shadow(1px 1px 3px $shadow-color);
+	cursor: pointer;
+}
+
+.add-joueur
+{
+	cursor: pointer;
 }
