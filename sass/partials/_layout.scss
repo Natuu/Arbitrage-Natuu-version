@@ -1,0 +1,10 @@
+/* Layout */
+@import  "layout/accueil.scss";
+@import  "layout/equipes.scss";
+@import  "layout/options.scss";
+@import  "layout/lightbox.scss";
+
+body
+{
+	background-color: $body;
+}

@@ -1,0 +1,120 @@
+/* Equipes */
+
+input[type="text"], .nom-change
+{
+	padding: 8px 15px;
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	border: 2px $texte solid;
+	@include box-shadow(inset 1px 1px 3px $shadow-color, 1px 1px 3px $shadow-color);
+	margin: 0 10%;
+	width: 80%;
+	@include box-sizing(border-box);
+	text-align: center;
+	text-shadow: 2px 2px 5px $shadow-color;
+}
+
+.team-1
+{
+	left: 0;
+
+	.actions
+	{
+		left: 0;
+	}
+}
+
+.team-2
+{
+	right: 0;
+
+	.actions
+	{
+		right: 0;
+	}
+}
+
+.joueurs-detail
+{
+	width: 100%;
+	margin: 10px 0;
+	height: 50%;
+	padding: 5px 55px;
+	@include box-sizing(border-box);
+
+	font-size: 0.5em;
+	text-align: left;
+	overflow-y: scroll;
+}
+
+.joueur
+{
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 0 10px 0;
+	width: 100%;
+}
+
+.actions-joueur
+{
+	float: right;
+}
+
+.edit
+{
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	position: relative;
+	top: 4px;
+	background-image: url(../images/options.png);
+	background-size: contain;
+}
+
+.delete
+{
+	display: inline-block;
+	font-size: 45px;
+	color: red;
+	line-height: 0em;
+	position: relative;
+	top: 11px;
+}
+
+.carton
+{
+	display: inline-block;
+	height: 16px;
+	width: 11px;
+	position: relative;
+	top: 1px;
+	background-color: yellow;
+	margin: 0 5px;
+	@include box-shadow(1px 1px 3px $shadow-color);
+}
+
+.numero
+{
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	float: left;
+}
+
+
+.color-picker
+{
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+.color-pickable
+{
+	width: 18px;
+	height: 18px;
+
+	border-radius: 300px;
+
+	display: inline-block;
+}
