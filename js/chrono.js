@@ -26,7 +26,7 @@ $(document).ready(function(){
 		
 	});
 	 
-	$("#reset").click(function(e){
+	$(".actualiser").click(function(e){
 		e.preventDefault();
 		Reset();
 	});

@@ -60,6 +60,7 @@ $(function () {
 				<input type="text" class="numero-change" value="00" style="display: none;">
 				<div class="actions-joueur">
 					<span class="carton"></span>
+					<span class="carton"></span>
 					<span class="edit"></span>
 					<span class="delete">×</span>
 				</div>
@@ -74,13 +75,20 @@ $(function () {
 	});
 
 	$(document).on("click", '.carton', function(){
-		if (!$(this).attr('style'))
+
+		var carton = $(this);
+
+		if (!carton.attr('style'))
 		{
-			$(this).css('background-color', 'yellow');
+			carton.css('background-color', 'yellow');
+
+			setTimeout(function() {
+				carton.css('background-color', 'grey');
+			}, 120000);
 		}
 		else
 		{
-			$(this).removeAttr('style');
+			carton.removeAttr('style');
 		}
 	});
 
