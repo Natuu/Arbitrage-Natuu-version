@@ -59,8 +59,7 @@ $(function () {
 	$('.add-joueur').click(function(){
 		$(this).before('
 			<li class="joueur">
-				<span class="numero">00</span>
-				<input type="text" class="numero-change" value="00" style="display: none;">
+				<span class="numero">0</span>
 				<div class="actions-joueur">
 					<span class="carton"></span>
 					<span class="out"></span>
@@ -142,14 +141,25 @@ $(function () {
 	});
 
 	$('.menu-quit').click(function() {
+		if (toChange.text() === '')
+		{
+			toChange.text('0');
+		}
+
 		$('.light-box').hide();
 	});
 
 
 	//Fonctions du numpad
 	$(document).on("keyup", function(){
+
 		if (event.keyCode == '13')
 		{
+			if (toChange.text() === '')
+			{
+				toChange.text('0');
+			}
+
 			$('.light-box').hide();
 		}
 		else if (event.keyCode == '48' || event.keyCode == '96')
@@ -198,8 +208,11 @@ $(function () {
 			newValue = newValue.slice(0, -1);
 		}
 
-		$('.numero-change').text(newValue);
-		toChange.text(newValue);
+		if ($('.light-box').css('display') !== 'none')
+		{
+			$('.numero-change').text(newValue);
+			toChange.text(newValue);
+		}
 	});
 
 	$('.numpad-1').click(function() {
