@@ -9,8 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
-	<span class="actualiser"></span>
-	<span class="chrono">0' 00''</span>
+	<span class="menu-button"></span>
+	<span class="chrono">
+		0 : 00
+	</span>
 
 	<article class="team-1 orange" data-color="orange">
 		<div class="index">
@@ -38,10 +40,9 @@
 				</li>
 				<li class="joueur">
 					<span class="numero">01</span>
-					<input type="text" class="numero-change" value='01' style="display: none;">
 					<div class="actions-joueur">
 						<span class="carton"></span>
-						<span class="carton"></span>
+						<span class="out"></span>
 						<span class="edit"></span>
 						<span class="delete">×</span>
 					</div>
@@ -82,10 +83,11 @@
 				</li>
 				<li class="joueur">
 					<span class="numero">01</span>
-					<input type="text" class="numero-change" value='01' style="display: none;">
 					<div class="actions-joueur">
 						<span class="carton"></span>
-						<span class="carton"></span>
+						<span class="out"></span>
+						<span class="out1"></span>
+						<span class="out2"></span>
 						<span class="edit"></span>
 						<span class="delete">×</span>
 					</div>
@@ -100,12 +102,23 @@
 		</div>
 	</article>
 
-	<div class="light-box" style="display: none;">
+	<div class="light-box edit-menu" style="display: none;">
 		<div>
-			<span class="cross">×</span>
-			<p class="texte">
-				Le caca c'est délicieux !
-			</p>
+			<span class="numero-change">01</span>
+			<ul class="numpad">
+				<li class="numpad-1">1</li>
+				<li class="numpad-2">2</li>
+				<li class="numpad-3">3</li>
+				<li class="numpad-4">4</li>
+				<li class="numpad-5">5</li>
+				<li class="numpad-6">6</li>
+				<li class="numpad-7">7</li>
+				<li class="numpad-8">8</li>
+				<li class="numpad-9">9</li>
+				<li class="numpad-del">Del.</li>
+				<li class="numpad-0">0</li>
+				<li class="menu-quit">Ok</li>
+			</ul>
 		</div>
 	</div>
 
