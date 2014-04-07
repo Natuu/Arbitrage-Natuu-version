@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# v1.0
+
+images/icone.png
+images/joueurs.png
+images/options.png
+images/out.png
+images/out1.png
+images/out1x.png
+images/out2.png
+images/out2x.png
+
+jsmin/chrono.min.js
+jsmin/code.min.js
+jsmin/jquery-1.10.2.min.js
+
+stylesheets/main.css
+stylesheets/font/Poiret_One.ttf
+
+index.html
+site.manifest
