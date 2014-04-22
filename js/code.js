@@ -59,6 +59,8 @@ $(function () {
 				<span class="numero">00</span>
 				<input type="text" class="numero-change" value="00" style="display: none;">
 				<div class="actions-joueur">
+					<span data-time="120" class="2-min">2"</span>
+					<span class="carton"></span>
 					<span class="carton"></span>
 					<span class="edit"></span>
 					<span class="delete">×</span>
@@ -82,6 +84,39 @@ $(function () {
 		{
 			$(this).removeAttr('style');
 		}
+	});
+
+	$(document).on("click", ".2-min", function(){
+
+		var $t = $(this);
+
+		if($t.attr('data-time') == 120)
+		{
+			var interval = setInterval(function(){
+
+				var time = $t.attr('data-time');
+				time-- ;
+
+				if(time > 0)
+				{
+					$t.attr('data-time', time);
+					$t.text(parseInt(time / 60) + '" ' + (time % 60) + "'");
+
+					time % 2 == 1 ? $t.addClass('red') : $t.removeClass('red');
+				}
+				else
+				{
+					clearInterval(interval);
+
+					$t.removeClass('red');
+					$t.text('2"');
+
+					alert('Pénalité joueur ' + $t.parent().parent().find('.numero').text() + ' terminée');
+				}
+
+			}, 1000);
+		}
+
 	});
 
 	$(document).on("click", '.edit', function(){

@@ -78,8 +78,6 @@
 	display: inline-block;
 	font-size: 45px;
 	line-height: 10px;
-	position: relative;
-	top: 11px;
 	cursor: pointer;
 
 	&:hover, &:focus, &:active
@@ -96,7 +94,7 @@
 	position: relative;
 	top: 1px;
 	background-color: $texte;
-	margin: 0 5px;
+	margin: 0 3px;
 	@include box-shadow(1px 1px 3px $shadow-color);
 	cursor: pointer;
 }
