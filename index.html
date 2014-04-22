@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" manifest="site.manifest">
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8"/>
 	<!--[if lt IE 9]>
 				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
 	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="apple-touch-icon-precomposed" href="images/icone.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/icone.png">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no">
 </head>
 <body>
+<<<<<<< HEAD
 	<!-- <span class="chrono">0' 00''</span> -->
+=======
+	<span class="menu-button" style="display: none;"></span>
+	<span class="chrono">
+		0 : 00
+	</span>
+>>>>>>> FETCH_HEAD
 
 	<article class="team-1 orange" data-color="orange">
 		<div class="index">
@@ -37,11 +50,11 @@
 				</li>
 				<li class="joueur">
 					<span class="numero">01</span>
-					<input type="text" class="numero-change" value='01' style="display: none;">
 					<div class="actions-joueur">
 						<span data-time="120" class="2-min">2"</span>
 						<span class="carton"></span>
 						<span class="carton"></span>
+						<span class="out"></span>
 						<span class="edit"></span>
 						<span class="delete">×</span>
 					</div>
@@ -82,11 +95,13 @@
 				</li>
 				<li class="joueur">
 					<span class="numero">01</span>
-					<input type="text" class="numero-change" value='01' style="display: none;">
 					<div class="actions-joueur">
 						<span class="2-min">2"</span>
 						<span class="carton"></span>
 						<span class="carton"></span>
+						<span class="out"></span>
+						<span class="out1"></span>
+						<span class="out2"></span>
 						<span class="edit"></span>
 						<span class="delete">×</span>
 					</div>
@@ -101,12 +116,23 @@
 		</div>
 	</article>
 
-	<div class="light-box" style="display: none;">
+	<div class="light-box edit-menu" style="display: none;">
 		<div>
-			<span class="cross">×</span>
-			<p class="texte">
-				Le caca c'est délicieux !
-			</p>
+			<span class="numero-change">01</span>
+			<ul class="numpad">
+				<li class="numpad-1">1</li>
+				<li class="numpad-2">2</li>
+				<li class="numpad-3">3</li>
+				<li class="numpad-4">4</li>
+				<li class="numpad-5">5</li>
+				<li class="numpad-6">6</li>
+				<li class="numpad-7">7</li>
+				<li class="numpad-8">8</li>
+				<li class="numpad-9">9</li>
+				<li class="numpad-del">Del.</li>
+				<li class="numpad-0">0</li>
+				<li class="menu-quit">Ok</li>
+			</ul>
 		</div>
 	</div>
 

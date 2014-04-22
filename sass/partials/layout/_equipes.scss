@@ -15,6 +15,22 @@
 	text-shadow: 2px 2px 5px $shadow-color;
 }
 
+.numero-change
+{
+	display: inline-block;
+	padding: 8px 5px;
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+	border: 2px $text-black solid;
+	@include box-shadow(inset 1px 1px 3px $shadow-color, 1px 1px 3px $shadow-color);
+	margin: 0 15px;
+	width: 100px;
+	@include box-sizing(border-box);
+	text-align: center;
+	text-shadow: 2px 2px 5px $shadow-color;
+}
+
 .team-1
 {
 	left: 0;
@@ -54,20 +70,24 @@
 {
 	display: inline-block;
 	width: 100%;
+	border: 1px $texte dashed;
+	padding: 5px 0 0 0;
+	margin: 0 0 15px 0;
+	@include border-radius(6px);
+	@include box-sizing(border-box);
 }
 
 .actions-joueur
 {
-	float: right;
+	display: block;
+	text-align: center;
 }
 
 .edit
 {
 	display: inline-block;
-	height: 22px;
-	width: 22px;
-	position: relative;
-	top: 4px;
+	height: 27px;
+	width: 27px;
 	background-image: url(../images/options.png);
 	background-size: contain;
 	cursor: pointer;
@@ -76,8 +96,15 @@
 .delete
 {
 	display: inline-block;
+<<<<<<< HEAD
 	font-size: 45px;
 	line-height: 10px;
+=======
+	font-size: 54px;
+	line-height: 20px;
+	position: relative;
+	top: 9px;
+>>>>>>> FETCH_HEAD
 	cursor: pointer;
 
 	&:hover, &:focus, &:active
@@ -89,40 +116,35 @@
 .carton
 {
 	display: inline-block;
-	height: 16px;
-	width: 11px;
+	height: 20px;
+	width: 14px;
 	position: relative;
-	top: 1px;
+	bottom: 3px;
 	background-color: $texte;
 	margin: 0 3px;
 	@include box-shadow(1px 1px 3px $shadow-color);
 	cursor: pointer;
 }
 
-.numero
+.out
 {
 	display: inline-block;
+	height: 25px;
+	width: 25px;
 	position: relative;
-	top: 5px;
-	float: left;
-	padding: 0 0 14px 0;
+	left: 3px;
+	bottom: 1px;
+	background-image: url(../images/out.png);
+	background-size: contain;
+	cursor: pointer;
 }
 
-.numero-change
+.numero
 {
-	padding: 3px 8px;
-	background-color: inherit;
-	color: inherit;
-	font-size: inherit;
-	border: 2px $texte solid;
-	@include box-shadow(inset 1px 1px 3px $shadow-color, 1px 1px 3px $shadow-color);
-	width: 55px;
-	@include box-sizing(border-box);
-	text-align: left;
-	text-shadow: 2px 2px 5px $shadow-color;
-	position: relative;
-	right: 10px;
-	bottom: 4px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-weight: 900;
 }
 
 .color-picker
@@ -133,8 +155,8 @@
 
 .color-pickable
 {
-	width: 18px;
-	height: 18px;
+	width: 23px;
+	height: 23px;
 	border-radius: 300px;
 	display: inline-block;
 	@include box-shadow(1px 1px 3px $shadow-color);

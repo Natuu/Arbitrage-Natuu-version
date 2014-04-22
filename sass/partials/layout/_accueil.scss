@@ -14,6 +14,23 @@ body
 }
 
 
+.menu-button
+{
+	position: fixed;
+	top: 210px;
+	margin-left: 29px;
+	cursor: pointer;
+
+	z-index: 1;
+
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image: url(../images/options.png);
+	background-size: contain;
+	cursor: pointer;
+}
+
 .chrono
 {
 	position: relative;

@@ -26,7 +26,7 @@ $(document).ready(function(){
 		
 	});
 	 
-	$("#reset").click(function(e){
+	$(".actualiser").click(function(e){
 		e.preventDefault();
 		Reset();
 	});
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			sec = "0" + sec;
 		}
 		
-		$(".chrono").text(min+"' "+sec+"''");
+		$(".chrono").text(min+" : "+sec);
 	}
 
 	function Start(){
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	}
 	 
 	function Reset(){
-		$(".chrono").text("0' 00''");
+		$(".chrono").text("0 : 00");
 		start = new Date();
 		reset = true;
 	}
